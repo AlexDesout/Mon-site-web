@@ -51,6 +51,10 @@ h2{
 h3{
     font-size: 35px; 
     font-weight: 800;
+    border-bottom: #eca648 2px solid;
+    width: 45%;
+    margin-bottom: 6%;
+    padding-bottom: 20px;
 }
 
 .separe{
@@ -115,12 +119,79 @@ span{
 }
 
 #photo{
+    position: relative;
     width: 50%;
+    text-align: center;  
 }
 
-
 #photo img{
+    position: absolute;
     height: 700px;
     right: 0;
     filter: brightness( 114% ) contrast( 100% ) saturate( 85% ) blur( 0px ) hue-rotate( 0deg );
+    top: -250px;
+    left: 50px;
 }
+
+#sect3 p{
+    text-align: center;
+    width: 100%;
+    
+}
+
+#sect3 h3{
+    margin-right: auto;
+    margin-left: auto;
+    width: 25%;
+}
+
+.carrou{
+    height: 250px;
+    width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.carrou i{
+    color: white;
+    position: absolute;
+}
+
+#gauche{
+    left: 0;
+    top: 30%;
+}
+
+#droite{
+    right: 0;
+    top: 30%;
+}
+
+.conteneur{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.conteneur img{
+    display: none;
+}
+
+img.active{
+    display: block;
+    animation: fade 0.8s;
+}
+
+.compt{
+    border: 2px solid pink;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
