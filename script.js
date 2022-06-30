@@ -92,3 +92,27 @@ fermeture.addEventListener('click', fermeFormulaire);
 function fermeFormulaire(){
     document.querySelector('#fond').style.display = 'none';
 }
+
+// Scroll vers le haut
+
+const haut = document.querySelector('#scroll');
+
+haut.addEventListener('click', remonte);
+document.addEventListener('scroll', affichage);
+
+console.log(window.scrollY);
+
+// Affichage de l'élément
+function affichage(){
+        if (window.scrollY == 0){
+            haut.style.display='none';
+        }
+        else{
+            haut.style.display='flex';
+        }
+}
+
+
+function remonte(){
+    window.scroll(0, -window.innerHeight);
+}
