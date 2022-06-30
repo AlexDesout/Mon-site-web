@@ -17,7 +17,6 @@ body{
     background-blend-mode: darken;
     /* object-position: left bottom; */
     height: 100%;
-    padding-top: 12%;
     background-attachment: fixed;
     background-position: 25% 95%;
 }
@@ -27,6 +26,10 @@ h1, h2, h3, li, p{
     color: white;
     margin: 0;
     
+}
+
+#sect1{
+    padding-top: 12%;
 }
 
 a{
@@ -106,8 +109,10 @@ span{
 }
 
 #sect2{
+    padding-top: 5%;
     display: flex;
     flex-direction: row;
+    height: 80%;
 }
 
 #moi{
@@ -133,10 +138,13 @@ span{
     left: 50px;
 }
 
+#sect3{
+    height: 83%;
+}
+
 #sect3 p{
     text-align: center;
-    width: 100%;
-    
+    width: 100%; 
 }
 
 #sect3 h3{
@@ -194,4 +202,220 @@ img.active{
         opacity: 1;
     }
 }
+
+#sect4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sect4 h3{
+    width: 20%;
+    
+}
+#sect4 img{
+    margin-top: 2%;
+    height: 500px;
+    box-shadow: 10px 10px #eca648;
+}
+#sect4 p{
+    margin-top: 1%;
+    margin-bottom:2%;
+}
+.bouton{
+    background-color: #eca648;
+    font-size: 23px;
+    font-weight: bolder;
+    padding: 10px 25px 10px 25px ;
+    border-radius: 30px;
+
+}
+
+#sect5{
+    height: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sect5 h3{
+    margin-top: 5%;
+    width: 20%;
+    margin-bottom: 3%;
+}
+
+.galerie{
+    display: flex;
+    flex-direction: row;
+    width: 61%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.galerie img{
+    height: 300px;
+    box-shadow: 10px 10px #eca648;
+}
+
+.galerie img:hover{
+    filter: opacity(0.7) drop-shadow(0 0 0 #eca648);
+}
+
+.galerie p{
+    width: 100%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.cesure{
+    width: 450px;
+    height: 300px;
+}
+#bau{
+    width: 60%;
+}
+
+#bau img{
+    width: 100%;
+    height: 90%;
+}
+
+#gre{
+    width: 40%;
+}
+
+#gre img{
+    width: 70%;
+    height: 90%;
+}
+
+.last{
+    margin: auto;
+}
+
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70%;
+}
+#contact h3{
+    width: 25%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+
+#contact span{
+    color: white;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 1%;
+}
+
+#contact button{
+    color: white;
+    font-weight: bolder;
+    width: 18%;
+    margin-bottom: 2%;
+}
+
+#fond{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.formBg{
+    background:rgba(0,0,0,0.7) url("img/bg.jpg");
+    background-blend-mode: darken;
+    width: 35%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fermeture{
+    position: absolute;
+    right: 31%;
+    top: 8%;
+}
+
+#fond form{
+    background-image: url("img/bg.jpg"), linear-gradient(200deg, #eca648, #000);
+    background-position: 50% 75%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 75%;
+    height: 95%;
+    align-items: center;
+}
+
+#fond form span{
+    position: absolute;
+    top: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #eca648;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    
+}
+
+#fond form p{
+    width: 75%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    font-style: italic;
+}
+
+#fond form h3{
+    width: auto;
+    margin-top: 20%;
+}
+
+#fond form input{
+    width: 80%;
+    height: 7%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    border: none;
+}
+
+#fond form textarea{
+    width: 80%;
+    height: 15%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    border: none;
+}
+
+#fond form .bouton{
+    padding: 0;
+    color: white;
+    font-size: large;
+    height: 7%;
+}
+
+
+ 
+
+
 

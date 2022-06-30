@@ -76,4 +76,19 @@ function resume(){
     inter = setInterval(suivant, 5000);
 }
 
+// Formulaire de contact
 
+
+const bouton = document.querySelector('#contact button');
+bouton.addEventListener('click', ouvreformulaire);
+
+function ouvreformulaire(){
+    document.querySelector('#fond').style.display = 'flex';
+}
+
+const fermeture = document.querySelector('#fermeture');
+fermeture.addEventListener('click', fermeFormulaire);
+
+function fermeFormulaire(){
+    document.querySelector('#fond').style.display = 'none';
+}
