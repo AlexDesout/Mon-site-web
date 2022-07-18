@@ -28,8 +28,6 @@ function suivant(){
         elements[compt].classList.add('active');
         elements[compt+1].classList.add('active'); 
     }
-    
-    console.log(compt)
 }
 
 droite.addEventListener('click',suivant);
@@ -49,7 +47,6 @@ function precedent(){
         elements[compt].classList.add('active');
         elements[compt+1].classList.add('active'); 
     }
-    console.log(compt)
 }
 
 gauche.addEventListener('click', precedent);
@@ -110,9 +107,80 @@ function affichage(){
         else{
             haut.style.display='flex';
         }
+        // console.log(window.scrollY);
 }
 
 
 function remonte(){
     window.scroll(0, -window.innerHeight);
 }
+
+// Animation en fonction de la hauteur
+
+
+
+
+// Animation des h3
+let observer = new IntersectionObserver(function(observables){
+    console.log(observables);
+    observables.forEach(function(observable){
+        if (observable.intersectionRatio > 0.4){
+            observable.target.classList.remove('cache');
+        }
+    })
+},{
+    threshold: [0.4]
+})
+
+
+const allH3 = document.querySelectorAll('h3');
+const carrou = document.querySelector('.carrou');
+const p = document.querySelector('#stp');
+const imgCv = document.querySelector('#imgCv');
+
+const all = [];
+let i = 0;
+
+while (i< allH3.length){
+    all.push(allH3[i]);
+    i++;
+}
+all.push(carrou);
+all.push(p);
+all.push(imgCv);
+
+console.log(all)
+
+all.forEach(function(item){
+    item.classList.add('cache');
+    observer.observe(item);
+})
+
+
+// Animation image et carrousel
+
+
+
+// let observeVersBas = new IntersectionObserver(function(animVersBas){
+//     console.log(animVersBas);
+//     animVersBas.forEach(function(bas){
+//         if (bas.intersectionRatio > 0.4){
+//             bas.target.classList.remove('animBas');
+//         }
+//     })
+// },{
+//     threshold: [0.4]
+// })
+
+
+
+
+
+// const allBas = [carrou,p]
+// console.log(allBas);
+
+
+// allBas.forEach(function(itemBas){
+//     itemBas.classList.add('animBas');
+//     observeVersBas.observe(itemBas);
+// })

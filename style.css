@@ -27,13 +27,26 @@ body{
 h1, h2, h3, li, p{
     color: white;
     margin: 0;
-    
+}
+
+@keyframes animH3{
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+        
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
 }
 
 #sect1{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 }
 
 a{
@@ -45,6 +58,18 @@ h1{
     font-size: 50px;
     font-weight: 800;
     letter-spacing: 8px;
+    animation: agrandir 1.5s;
+}
+
+@keyframes agrandir{
+    from{
+        transform: scale(0.1);
+        opacity: 0.4;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 h2{
@@ -53,6 +78,18 @@ h2{
     letter-spacing: 4px;
     font-size: 16px;
     margin-top: 1%;
+    animation: slideHaut 2s;
+}
+
+@keyframes slideHaut{
+    from{
+        transform: translateY(1500%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 h3{
@@ -62,6 +99,14 @@ h3{
     width: 45%;
     margin-bottom: 6%;
     padding-bottom: 20px;
+    transform: translateY(0%);
+    opacity: 1;
+    transition: transform 1.6s, opacity 1.6s;
+}
+
+h3.cache{
+    transform: translateY(100%);
+    opacity: 0;
 }
 
 .separe{
@@ -69,6 +114,7 @@ h3{
     margin: auto;
     border-top: 2px solid #eca648;
     margin-top: 3%;
+    animation: slideHaut 1s;
 }
 
 ul{
@@ -78,8 +124,8 @@ ul{
     flex-direction: row;
     justify-content: space-around;
     margin-top: 3%;
-    
 }
+
 
 li{
     border: 2px solid white;
@@ -89,12 +135,23 @@ li{
     padding-bottom: 1em;
     font-weight: bold;
     transition-duration: 0.6s;
+    animation: slideDroit 1s;
 }
 
 li:hover{
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(20%);
-   
+}
+
+@keyframes slideDroit{
+    from{
+        transform: translateX(-170%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
 
 #quote{
@@ -106,7 +163,19 @@ li:hover{
     margin-top: 8%;
     margin-bottom: 3%;
     text-align: center;
+    opacity: 0;
+    animation: fondu 5s forwards;
     
+    
+}
+
+@keyframes fondu{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 #guillemet{
@@ -116,6 +185,7 @@ li:hover{
     border-radius: 30px;
     padding:15px 10px 15px 10px;
     transition-duration: 0.4s;
+    animation: slideHaut 5s;
 }
 
 #guillemet:hover{
@@ -126,6 +196,8 @@ li:hover{
     margin-top: 2%;
     text-align: center;
     font-weight: bolder;
+    opacity: 0;
+    animation: slideHaut 1s forwards;
 }
 
 #sect2{
@@ -140,6 +212,8 @@ li:hover{
     width: 50%;
     padding-left: 3%;
 }
+
+
 #moi h3, p{
     text-align: left;
 }
@@ -180,11 +254,30 @@ li:hover{
     height: 250px;
     width: 1000px;
     position: relative;
+    transform: translateY(0%);
+    opacity: 1;
+    transition: transform 2.3s, opacity 2.3s;
+}
+
+.carrou.cache{
+    transform: translateY(-200%);
+    opacity: 0;
 }
 
 .carrou i{
     color: white;
     position: absolute;
+}
+
+#stp{
+    transform: translateY(0%);
+    opacity: 1;
+    transition: transform 1.5s, opacity 1.5s;
+}
+
+#stp.cache{
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 #gauche{
@@ -219,9 +312,12 @@ img.active{
 @keyframes fade {
     from{
         opacity: 0;
+        transform: scale(0.5);
     }
     to{
         opacity: 1;
+        transform: scale(1);
+        
     }
 }
 
@@ -242,6 +338,15 @@ img.active{
     height: 500px;
     box-shadow: 10px 10px #eca648;
     transition-duration: 0.4s;
+    transform: translateY(0%);
+    opacity: 1;
+    transition: transform 1.5s, opacity 1.5s;
+}
+
+#imgCv.cache{
+    transform: translateY(-50%);
+    opacity: 1;
+    
 }
 
 #sect4 img:hover{
