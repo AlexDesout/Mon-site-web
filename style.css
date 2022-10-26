@@ -226,7 +226,7 @@ li:hover{
 
 #photo img{
     position: absolute;
-    height: 700px;
+    /* height: 700px; */
     right: 0;
     filter: brightness( 114% ) contrast( 100% ) saturate( 85% ) blur( 0px ) hue-rotate( 0deg );
     top: -250px;
