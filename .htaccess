@@ -1,0 +1,4 @@
+# Utilisation d'Expires
+
+ExpiresActive On
+ExpiresDefault "access plus 30 minutes" 
