@@ -233,7 +233,7 @@ li:hover{
     /* height: 700px; */
     right: 0;
     filter: brightness( 114% ) contrast( 100% ) saturate( 85% ) blur( 0px ) hue-rotate( 0deg );
-    width: 30rem;
+    width: 40rem;
     top: -20rem;
     /* left: 50px; */
 }
@@ -810,13 +810,13 @@ img.active{
     
     #photo{
         position: none;
-        width: 90%;
         text-align: center;  
     }
     
     #photo img{
         /* position: absolute; */
         height: 20rem;
+        width: 20rem;
         margin: auto;
         top: 0px;
         left: 0px;
