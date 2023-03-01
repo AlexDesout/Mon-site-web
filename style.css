@@ -42,7 +42,7 @@ h1, h2, h3, li, p{
     }
 }
 
-.burger{
+.nav-burger{
     display: none;
 }
 
@@ -224,7 +224,7 @@ li:hover{
 
 #photo{
     position: relative;
-    width: 50%;
+    width: 40rem;
     text-align: center;  
 }
 
@@ -233,8 +233,9 @@ li:hover{
     /* height: 700px; */
     right: 0;
     filter: brightness( 114% ) contrast( 100% ) saturate( 85% ) blur( 0px ) hue-rotate( 0deg );
-    top: -250px;
-    left: 50px;
+    width: 30rem;
+    top: -20rem;
+    /* left: 50px; */
 }
 
 #sect3{
@@ -615,6 +616,7 @@ img.active{
     }
 
     .nav-burger{
+        display: block;
         position: fixed;
         /* background-color: red; */
         background:rgba(0,0,0,0.9);
