@@ -42,6 +42,10 @@ h1, h2, h3, li, p{
     }
 }
 
+.burger{
+    display: none;
+}
+
 #sect1{
     display: flex;
     flex-direction: column;
@@ -600,25 +604,47 @@ img.active{
 @media screen and (max-width: 800px) {
     
     
-    @keyframes animH3{
-        from{
-            transform: translateY(100%);
-            opacity: 0;
-            
-        }
-        to{
-            transform: translateY(0);
-            opacity: 1;
-            
-        }
-    }
+    
     
     #sect1{
         
         display: flex;
         flex-direction: column;
         justify-content: center; 
+        display: none;
     }
+
+    .nav-burger{
+        position: fixed;
+        /* background-color: red; */
+        background:rgba(0,0,0,0.9);
+        width: 100%;
+        z-index: 1;
+    }
+    .nav-burger nav{
+        display: none;
+    }
+    .nav-burger ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* .nav-burger ul:nth-child(2n+2) li{
+        border-bottom: 2px solid white;
+    } */
+    .nav-burger li{
+        border: none;
+    }
+
+    .burger{
+        display: flex;
+        color: white;
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        height: 50px;
+    }
+    
     
     a{
         text-decoration: none;
@@ -821,6 +847,7 @@ img.active{
         transform: translateY(0%);
         opacity: 1;
         transition: transform 1.5s, opacity 1.5s;
+        width: 90%;
         margin-top: 5%;
         
     }
@@ -876,7 +903,7 @@ img.active{
         flex-direction: column;
         width: 60%;
         align-items: center;
-        margin-bottom: 10%;
+        margin-bottom: 8rem;
     }
     
     .galerie p{
@@ -909,9 +936,9 @@ img.active{
     }
     
     #gre{
+        margin-top: 5rem;
         width: 100%;
     }
-    
     
     .last{
         margin: auto;
@@ -934,8 +961,8 @@ img.active{
         width: 50%;
         font-weight: bolder;
         text-transform: uppercase;
-        margin-top: 20rem;
-        margin-bottom: 3%;
+        margin-top: 25rem;
+        /* margin-bottom: 3%; */
     }
     
     #contact span{

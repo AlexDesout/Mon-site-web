@@ -1,3 +1,27 @@
+let burger = document.querySelector('.burger');
+let burgerNav = document.querySelector('.nav-burger nav');
+let verifBurger = false
+
+
+
+// burger.addEventListener('click', myFunction())
+burger.addEventListener('click', ()=>{
+    verifBurger = !verifBurger;
+    if (verifBurger == false){
+        burgerNav.style.display = "none";
+    }
+    else{
+        burgerNav.style.display = "flex"; 
+    }
+    
+})
+
+
+
+
+
+
+
 const gauche = document.querySelector('#gauche');
 const droite = document.querySelector('#droite')
 
@@ -8,7 +32,7 @@ const taille = elements.length
 
 var compt = 1;
 
-console.log(taille-2)
+// console.log(taille-2)
 function suivant(){
     // Suppression de l'actif actuel
     
@@ -97,7 +121,7 @@ const haut = document.querySelector('#scroll');
 haut.addEventListener('click', remonte);
 document.addEventListener('scroll', affichage);
 
-console.log(window.scrollY);
+// console.log(window.scrollY);
 
 // Affichage de l'élément
 function affichage(){
@@ -122,7 +146,7 @@ function remonte(){
 
 // Animation des h3
 let observer = new IntersectionObserver(function(observables){
-    console.log(observables);
+    // console.log(observables);
     observables.forEach(function(observable){
         if (observable.intersectionRatio > 0.4){
             observable.target.classList.remove('cache');
@@ -149,7 +173,7 @@ all.push(carrou);
 all.push(p);
 all.push(imgCv);
 
-console.log(all)
+// console.log(all)
 
 all.forEach(function(item){
     item.classList.add('cache');
@@ -184,3 +208,4 @@ all.forEach(function(item){
 //     itemBas.classList.add('animBas');
 //     observeVersBas.observe(itemBas);
 // })
+
